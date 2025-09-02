@@ -19,3 +19,11 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: job_test_1.sql
+      description: "A starter dbt model"
+      columns:
+          - name: test_time
+            description: "test time"
+            tests:
+                - unique
