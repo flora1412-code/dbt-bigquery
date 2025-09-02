@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: LB_dataset
+    description: "Raw dataset containing industry data"
+    tables:
+      - name: industry_data
+        description: "Original industry data table"
+        
+models:
+  - name: transform_industry_data
+    description: "Cleaned and transformed industry data from table1"
+    columns:
+      - name: year
+        tests: [not_null]
+      - name: industry_aggregation_nzsioc
+        tests: [not_null]
+      - name: industry_code_nzsioc
+        tests: [not_null]
+      - name: industry_name_nzsioc
+        tests: [not_null]
+      - name: units
+      - name: variable_code
+        tests: [not_null]
+      - name: variable_name
+        tests: [not_null]
+      - name: variable_category
+      - name: value
+        tests: [not_null]
+      - name: industry_code_anzsic06
