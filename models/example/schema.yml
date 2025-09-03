@@ -20,10 +20,23 @@ models:
                 - unique
                 - not_null
 
-    - name: job_test_1.sql
-      description: "A starter dbt model"
+    - name: job_test_1
+      description: "current sydney time"
       columns:
           - name: test_time
             description: "test time"
             tests:
                 - unique
+
+    - name: job_test_2
+      description: "insert sydney time and run_id"
+      columns:
+          - name: job_run_id
+            description: "test time"
+            tests:
+                - unique
+                - not_null
+    - name: run_time
+      description: "记录运行的悉尼时间戳"
+      tests:
+        - not_null
